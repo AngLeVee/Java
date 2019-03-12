@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="310.0" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="leveep6.FXMLDocumentController">
+   <children>
+      <Label layoutX="21.0" layoutY="18.0" text="Name" />
+      <Label layoutX="21.0" layoutY="51.0" text="PIN" />
+      <Label layoutX="21.0" layoutY="83.0" text="Opening Deposit" />
+      <TextField fx:id="tFieldName" layoutX="151.0" layoutY="14.0" />
+      <TextField fx:id="tFieldPIN" layoutX="151.0" layoutY="47.0" />
+      <TextField fx:id="tFieldDep" layoutX="151.0" layoutY="79.0" />
+      <RadioButton fx:id="rButtLock" disable="true" layoutX="17.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleRButtLockAction" selected="true" text="Lock">
+         <toggleGroup>
+            <ToggleGroup fx:id="tGroup1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rButtSec" disable="true" layoutX="117.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleRButtSecAction" text="Secure" toggleGroup="$tGroup1" />
+      <RadioButton fx:id="rButtUnlock" disable="true" layoutX="214.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleRButtUnlockAction" text="Unlock" toggleGroup="$tGroup1" />
+      <Line endX="180.0" layoutX="112.0" layoutY="145.0" startX="-100.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="18.0" layoutY="180.0" text="PIN" />
+      <Button fx:id="buttAcc" layoutX="202.0" layoutY="112.0" mnemonicParsing="false" onAction="#handleButtAccAction" text="Create Account" />
+      <Label layoutX="15.0" layoutY="209.0" text="Transaction" />
+      <Label layoutX="17.0" layoutY="238.0" text="Balance" />
+      <Button fx:id="buttWith" disable="true" layoutX="91.0" layoutY="271.0" minWidth="70.0" mnemonicParsing="false" onAction="#handleButtWithAction" prefWidth="70.0" text="Withdraw" AnchorPane.leftAnchor="87.5" />
+      <Button fx:id="buttDep" disable="true" layoutX="167.0" layoutY="271.0" minWidth="70.0" mnemonicParsing="false" onAction="#handleButtDepAction" prefWidth="70.0" text="Deposit" AnchorPane.leftAnchor="165.0" />
+      <Button fx:id="buttInq" disable="true" layoutX="10.0" layoutY="271.0" minWidth="70.0" mnemonicParsing="false" onAction="#handleButtInqAction" prefWidth="70.0" text="Inquiry" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="241.0" />
+      <Button fx:id="buttDone" disable="true" layoutX="248.0" layoutY="271.0" minWidth="70.0" mnemonicParsing="false" onAction="#handleButtDoneAction" prefWidth="70.0" text="Done" AnchorPane.rightAnchor="10.0" />
+      <PasswordField fx:id="pFieldPIN" disable="true" layoutX="151.0" layoutY="176.0" />
+      <TextField fx:id="tFieldTrans" disable="true" layoutX="151.0" layoutY="205.0" />
+      <Label fx:id="labBal" layoutX="272.0" layoutY="238.0" text="0.00" />
+      <Label layoutX="157.0" layoutY="238.0" text="\$" />
+      <Label layoutX="157.0" layoutY="209.0" text="\$" />
+      <Label fx:id="labInfo" layoutX="23.0" layoutY="107.0" text="Label" />
+   </children>
+</AnchorPane>
